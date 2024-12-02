@@ -1,0 +1,279 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 56px;
+}
+
+/* Night Mode (Dark Theme) */
+body.dark-theme {
+    background-color: #121212; /* Consistent dark background for the body */
+    color: #f4f4f4; /* Light text for better readability */
+}
+
+/* Consistent section background for dark theme */
+body.dark-theme section {
+    background-color: #121212; /* Matches the body background */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .navbar {
+    background-color: #1f1f1f;
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background: #007bff;
+    color: #ffffff !important;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section */
+#profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f4f4; /* Light theme background */
+    color: #333; /* Text color */
+}
+
+body.dark-theme #profile {
+    background-color: #121212; /* Consistent dark theme background */
+    color: #f4f4f4; /* Light text for dark background */
+}
+
+#profile .profile-image img {
+    width: 100%;
+    max-width: 500px; /* Adjust the size of the image */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+}
+
+#profile .profile-text {
+    margin-left: 40px; 
+    max-width: 500px; 
+    text-align: left;
+}
+
+#profile .profile-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #007bff; /* Updated text color for light theme */
+}
+
+body.dark-theme #profile .profile-text h1 {
+    color: #ffffff; /* Ensure the name is clearly visible */
+}
+
+#profile .profile-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666; /* Subtle text color */
+}
+
+body.dark-theme #profile .profile-text p {
+    color: #dcdcdc; /* Subtle light gray text for dark mode */
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #dddddd;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+body.dark-theme section h2 {
+    color: #ffffff; /* Ensure headers are visible in dark mode */
+}
+
+/* Projects and Internships */
+.project-card, .internship {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+body.dark-theme .project-card, 
+body.dark-theme .internship {
+    background-color: #1f1f1f; /* Match card backgrounds to dark theme */
+    color: #f4f4f4;
+}
+
+.project-card:hover, .internship:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+body.dark-theme .project-card h3 {
+    color: #ffffff;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+body.dark-theme .project-card p {
+    color: #dcdcdc;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #ffffff;
+    background: #007bff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.project-card a:hover {
+    background: #0056b3;
+}
+
+/* Forms */
+form input, form textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contactForm button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#theme-toggle img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover img {
+    transform: rotate(15deg);
+}
+
+form #contactForm .btn-custom {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form #contactForm .btn-custom:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #profile {
+        flex-direction: column; /* Stack image and text for small screens */
+        text-align: center;
+    }
+
+    #profile .profile-text {
+        margin-left: 0;
+        margin-top: 20px; /* Space between image and text */
+    }
+
+    #profile .profile-image img {
+        max-width: 300px; /* Reduce image size for smaller screens */
+    }
+}
