@@ -16,13 +16,13 @@ body {
 
 /* Night Mode (Dark Theme) */
 body.dark-theme {
-    background-color: #121212; /* Consistent dark background for the body */
-    color: #f4f4f4; /* Light text for better readability */
+    background-color: #121212; 
+    color: #f4f4f4; 
 }
 
 /* Consistent section background for dark theme */
 body.dark-theme section {
-    background-color: #121212; /* Matches the body background */
+    background-color: #121212;
 }
 
 /* Navbar */
@@ -39,13 +39,29 @@ body.dark-theme section {
 }
 
 .navbar-nav .nav-item .nav-link {
-    transition: background 0.3s ease-in-out;
+    color: #333;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500; 
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    background: #007bff;
-    color: #ffffff !important;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 4px; 
 }
+
+body.dark-theme .navbar-nav .nav-item .nav-link {
+    color: #f4f4f4;
+}
+
+body.dark-theme .navbar-nav .nav-item .nav-link:hover {
+    color: #121212;
+    background-color: #f4f4f4; 
+}
+
 
 .navbar.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,21 +74,21 @@ body.dark-theme section {
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: #f4f4f4; /* Light theme background */
-    color: #333; /* Text color */
+    background-color: #f4f4f4;
+    color: #333; 
 }
 
 body.dark-theme #profile {
-    background-color: #121212; /* Consistent dark theme background */
-    color: #f4f4f4; /* Light text for dark background */
+    background-color: #121212; 
+    color: #f4f4f4;
 }
 
 #profile .profile-image img {
     width: 100%;
-    max-width: 500px; /* Adjust the size of the image */
+    max-width: 500px; 
     height: auto;
-    border-radius: 10px; /* Optional: Rounded corners for the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 #profile .profile-text {
@@ -85,21 +101,21 @@ body.dark-theme #profile {
     font-size: 2.5rem;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #007bff; /* Updated text color for light theme */
+    color: #007bff;
 }
 
 body.dark-theme #profile .profile-text h1 {
-    color: #ffffff; /* Ensure the name is clearly visible */
+    color: #ffffff;
 }
 
 #profile .profile-text p {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #666; /* Subtle text color */
+    color: #666; 
 }
 
 body.dark-theme #profile .profile-text p {
-    color: #dcdcdc; /* Subtle light gray text for dark mode */
+    color: #dcdcdc;
 }
 
 /* Sections */
@@ -124,7 +140,7 @@ section h2 {
 }
 
 body.dark-theme section h2 {
-    color: #ffffff; /* Ensure headers are visible in dark mode */
+    color: #ffffff; 
 }
 
 /* Projects and Internships */
@@ -139,7 +155,7 @@ body.dark-theme section h2 {
 
 body.dark-theme .project-card, 
 body.dark-theme .internship {
-    background-color: #1f1f1f; /* Match card backgrounds to dark theme */
+    background-color: #1f1f1f;
     color: #f4f4f4;
 }
 
@@ -264,16 +280,16 @@ form #contactForm .btn-custom:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     #profile {
-        flex-direction: column; /* Stack image and text for small screens */
+        flex-direction: column;
         text-align: center;
     }
 
     #profile .profile-text {
         margin-left: 0;
-        margin-top: 20px; /* Space between image and text */
+        margin-top: 20px;
     }
 
     #profile .profile-image img {
-        max-width: 300px; /* Reduce image size for smaller screens */
+        max-width: 300px;
     }
 }
